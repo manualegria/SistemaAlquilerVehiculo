@@ -38,8 +38,8 @@ namespace SistemaAlquilerVehiculos
                         Console.Write("Precio Alquiler: ");
                         decimal precio = decimal.Parse(Console.ReadLine());
 
-                        Automovil automovil1 = new(marca, modelo, anio, precio);
-                        Vehiculo automovil = automovil1;
+                        Automovil automovil2 = new(marca, modelo, anio, precio);
+                        Vehiculo automovil = automovil2;
                         sistema.AgregarVehiculo(automovil);
                         break;
 
