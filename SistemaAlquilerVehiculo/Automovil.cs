@@ -10,6 +10,8 @@ namespace SistemaAlquilerVehiculo
 {
     public class Automovil : Vehiculo, IReserva, IDevuelve
     {
+        public override TipoVehiculo Tipo => throw new NotImplementedException();
+
         // Constructor
         public Automovil(string marca, string modelo, int anio, decimal precioAlquiler)
             : base(marca, modelo, anio, precioAlquiler, TipoVehiculo.AUTOMOVIL) { }
@@ -41,4 +43,18 @@ namespace SistemaAlquilerVehiculo
                 Console.WriteLine("Este automóvil no estaba alquilado.");
             }
         }
+
+        public void Reservar(Cliente cliente, DateTime fechaInicio, DateTime fechaFin)
+        {
+            if (Estado == EstadoVehiculo.DISPONIBLE)
+            {
+                CambiarEstado(EstadoVehiculo.ALQUILADO);
+                Console.WriteLine($"El automóvil {Marca}, {Modelo} ha sido reservado.");
+            }
+            else
+            {
+                Console.WriteLine("Este automóvil no está disponible.");
+            }
+        }
     }
+}

@@ -11,26 +11,22 @@ namespace SistemaAlquilerVehiculo
     // Representa una reserva de un vehículo por un cliente.
     public class Reserva
     {
+        public Vehiculo Vehiculo { get; private set; }
+        public string Cliente { get; private set; }
+        public DateTime FechaInicio { get; private set; }
+        public DateTime FechaFin { get; private set; }
 
-        public String Cliente { get; set; }
-        public Vehiculo Vehiculo { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFin { get; set; }
-
-
-
-        // Constructor de la clase Reserva.
-        public Reserva(String cliente, Vehiculo vehiculo, DateTime fechaInicio, DateTime fechaFin)
-
+        public Reserva(Vehiculo vehiculo, string cliente, DateTime fechaInicio, DateTime fechaFin)
         {
-            Cliente = cliente;
             Vehiculo = vehiculo;
+            Cliente = cliente;
             FechaInicio = fechaInicio;
             FechaFin = fechaFin;
         }
+    
 
 
-        public MostrarReseva(Vehiculo vehiculo, string cliente, DateTime fechaInicio)
+    public void MostrarReserva()
         {
             Console.WriteLine($"Cliente: {Cliente}, Vehículo: {Vehiculo.Marca} {Vehiculo.Modelo}, Desde: {FechaInicio}, Hasta: {FechaFin}");
         }

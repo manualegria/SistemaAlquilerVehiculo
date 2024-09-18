@@ -17,7 +17,8 @@ namespace SistemaAlquilerVehiculo
 
         private List<Vehiculo> flota = new List<Vehiculo>();
         private List<Cliente> clientes = new List<Cliente>();
-        private object? reservas;
+        private List<Reserva> reservas = new List<Reserva>();
+
 
 
         // metodo para Agregar un nuevo vehículo
@@ -46,7 +47,7 @@ namespace SistemaAlquilerVehiculo
             if (vehiculo != null)
             {
                 var reserva = new Reserva(vehiculo, cliente, fechaInicio, fechaFin);
-                reservas.add(reserva);
+                reservas.Add(reserva); // Cambiado de 'reservas.add' a 'reservas.Add'
                 ((IReserva)vehiculo).Reservar();
             }
             else

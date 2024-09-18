@@ -22,7 +22,7 @@ namespace SistemaAlquilerVehiculo
         public abstract TipoVehiculo Tipo { get; }
 
         // Constructor
-        public Vehiculo(string marca, string modelo, int anio, decimal precioAlquiler)
+        public Vehiculo(string marca, string modelo, int anio, decimal precioAlquiler, TipoVehiculo aUTOMOVIL)
         {
             Marca = marca;
             Modelo = modelo;

@@ -9,6 +9,9 @@ namespace SistemaAlquilerVehiculo
 {
     public abstract class Motocicleta : Vehiculo
     {
+        protected Motocicleta(string marca, string modelo, int anio, decimal precioAlquiler, TipoVehiculo aUTOMOVIL) : base(marca, modelo, anio, precioAlquiler, aUTOMOVIL)
+        {
+        }
 
         public override TipoVehiculo Tipo => TipoVehiculo.MOTOCICLETA;
     }
