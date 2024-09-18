@@ -9,7 +9,7 @@ namespace SistemaAlquilerVehiculo.interfaces
     public interface IReserva
     {
 
-        void Reservar(Cliente cliente, DateTime fechaInicio, DateTime fechaFin);
+        void Reservar();
         void Reservar();
     }
 }

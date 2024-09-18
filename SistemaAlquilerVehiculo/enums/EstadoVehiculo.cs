@@ -11,6 +11,6 @@ namespace SistemaAlquilerVehiculo.enums
 
         DISPONIBLE,
         ALQUILADO,
-        MANTENIMIENTO
+        MANTENIMIENTo
     }
 }
