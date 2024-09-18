@@ -9,7 +9,7 @@ namespace SistemaAlquilerVehiculo
     internal class Automovil
     {
     }
-    public class Automovil : Vehiculo, IReserva, IDevuelve
+    public class Automovil : Vehiculo 
     {
 
         public Automovil(string marca, string modelo, int anio, decimal precioAlquiler)
