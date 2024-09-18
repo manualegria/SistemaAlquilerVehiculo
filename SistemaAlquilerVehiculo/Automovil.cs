@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SistemaAlquilerVehiculo
 {
-    public class Automovil : Vehiculo, IReserva, IDevuelve
+    public  abstract class Automovil : Vehiculo, IReserva, IDevuelve
     {
 
         public Automovil(string marca, string modelo, int anio, decimal precioAlquiler)
