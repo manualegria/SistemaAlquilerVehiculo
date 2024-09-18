@@ -1,3 +1,5 @@
+
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +18,17 @@ namespace SistemaAlquilerVehiculo
         public DateTime FechaFin { get; set; }
 
 
+
         // Constructor de la clase Reserva.
         public Reserva(String cliente, Vehiculo vehiculo, DateTime fechaInicio, DateTime fechaFin)
+
         {
             Cliente = cliente;
             Vehiculo = vehiculo;
             FechaInicio = fechaInicio;
             FechaFin = fechaFin;
         }
+
 
         public MostrarReseva(Vehiculo vehiculo, string cliente, DateTime fechaInicio)
         {
@@ -32,3 +37,4 @@ namespace SistemaAlquilerVehiculo
     }
 
 }
+

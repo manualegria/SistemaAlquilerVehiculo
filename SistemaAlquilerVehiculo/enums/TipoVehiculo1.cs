@@ -11,6 +11,6 @@ namespace SistemaAlquilerVehiculo.enums
 
         AUTOMOVIL,
         MOTOCICLETA,
-        CAMIOn
+        CAMION
     }
 }
