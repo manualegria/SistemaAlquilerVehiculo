@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SistemaAlquilerVehiculo;
 using SistemaAlquilerVehiculos.enums;
 
-namespace SistemaAlquilerVehiculos.@class
+namespace SistemaAlquilerVehiculos
 {
     class Program
     {
@@ -39,7 +39,8 @@ namespace SistemaAlquilerVehiculos.@class
                         Console.Write("Precio Alquiler: ");
                         decimal precio = decimal.Parse(Console.ReadLine());
 
-                        Vehiculo automovil = new Automovil(marca, modelo, anio, precio);
+                        Automovil automovil1 = new(marca, modelo, anio, precio);
+                        Vehiculo automovil = automovil1;
                         sistema.AgregarVehiculo(automovil);
                         break;
 

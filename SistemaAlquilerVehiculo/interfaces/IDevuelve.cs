@@ -8,6 +8,6 @@ namespace SistemaAlquilerVehiculo.interfaces
 {
     public interface IDevuelve
     {
-
+        void Devolver();
     }
 }

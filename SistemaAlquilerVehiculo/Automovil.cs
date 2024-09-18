@@ -37,5 +37,17 @@ namespace SistemaAlquilerVehiculo
             }
         }
 
+        public void Reservar(Cliente cliente, DateTime fechaInicio, DateTime fechaFin)
+        {
+            if (Estado == EstadoVehiculo.DISPONIBLE)
+            {
+                CambiarEstado(EstadoVehiculo.ALQUILADO);
+                Console.WriteLine($"El automóvil {Marca}, {Modelo} ha sido reservado.");
+            }
+            else
+            {
+                Console.WriteLine("Este automóvil no está disponible.");
+            }
+        }
     }
 }
