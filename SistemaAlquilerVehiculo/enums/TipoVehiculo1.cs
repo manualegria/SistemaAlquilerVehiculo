@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace SistemaAlquilerVehiculo.enums
 {
- 
     public enum TipoVehiculo
     {
 
