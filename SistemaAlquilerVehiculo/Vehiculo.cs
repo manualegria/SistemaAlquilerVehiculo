@@ -29,7 +29,13 @@ namespace SistemaAlquilerVehiculo
             Estado = EstadoVehiculo.DISPONIBLE;
         }
 
-
+        protected Vehiculo(string marca, string modelo, int anio, decimal precioAlquiler)
+        {
+            Marca = marca;
+            Modelo = modelo;
+            Anio = anio;
+            PrecioAlquiler = precioAlquiler;
+        }
 
         public void CambiarEstado(EstadoVehiculo nuevoEstado)
         {
