@@ -46,7 +46,7 @@ namespace SistemaAlquilerVehiculo
             if (vehiculo != null)
             {
                 var reserva = new Reserva(vehiculo, cliente, fechaInicio, fechaFin);
-                reservas.Add(reserva);
+                reservas.add(reserva);
                 ((IReserva)vehiculo).Reservar();
             }
             else

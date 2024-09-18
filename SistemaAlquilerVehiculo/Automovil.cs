@@ -8,22 +8,13 @@ using System.Threading.Tasks;
 
 namespace SistemaAlquilerVehiculo
 {
-    public  abstract class Automovil : Vehiculo, IReserva, IDevuelve
+    public class Automovil : Vehiculo, IReserva, IDevuelve
     {
-
+        // Constructor
         public Automovil(string marca, string modelo, int anio, decimal precioAlquiler)
-             : base(marca, modelo, anio, precioAlquiler) { }
+            : base(marca, modelo, anio, precioAlquiler, TipoVehiculo.AUTOMOVIL) { }
 
-
-        public void Devolver()
-        {
-
-            if (Estado == EstadoVehiculo.ALQUILADO)
-            {
-                Console.WriteLine($"El automóvil {Marca}, {Modelo} ha sido devuelto.");
-            }
-
-        }
+        // Métodos de la interfaz IReserva
         public void Reservar()
         {
             if (Estado == EstadoVehiculo.DISPONIBLE)
@@ -37,17 +28,17 @@ namespace SistemaAlquilerVehiculo
             }
         }
 
-        public void Reservar(Cliente cliente, DateTime fechaInicio, DateTime fechaFin)
+        // Métodos de la interfaz IDevuelve
+        public void Devolver()
         {
-            if (Estado == EstadoVehiculo.DISPONIBLE)
+            if (Estado == EstadoVehiculo.ALQUILADO)
             {
-                CambiarEstado(EstadoVehiculo.ALQUILADO);
-                Console.WriteLine($"El automóvil {Marca}, {Modelo} ha sido reservado.");
+                CambiarEstado(EstadoVehiculo.DISPONIBLE);
+                Console.WriteLine($"El automóvil {Marca}, {Modelo} ha sido devuelto.");
             }
             else
             {
-                Console.WriteLine("Este automóvil no está disponible.");
+                Console.WriteLine("Este automóvil no estaba alquilado.");
             }
         }
     }
-}
